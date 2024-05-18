@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Pagamentos</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .pago {
+            color: green;
+        }
+        .atrasado {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabela de Pagamentos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Valor</th>
+                <th>Data de Vencimento</th>
+                <th>Status</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>João</td>
+                <td>R$ 100,00</td>
+                <td>10/05/2024</td>
+                <td class="pago">MENSALIDADE EM DIA</td>
+                <td><button onclick="excluirCliente(this)">Excluir</button></td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>R$ 150,00</td>
+                <td>15/05/2024</td>
+                <td class="atrasado">MENSALIDADE ATRASADA</td>
+                <td><button onclick="excluirCliente(this)">Excluir</button></td>
+            </tr>
+            <!-- Adicione mais linhas conforme necessário -->
+        </tbody>
+    </table>
+    <h2>Adicionar Novo Cliente</h2>
+    <form>
+        <label for="nome">Nome do Cliente:</label>
+        <input type="text" id="nome" name="nome">
+        <label for="vencimento">Data de Vencimento:</label>
+        <input type="date" id="vencimento" name="vencimento">
+        <input type="submit" value="Adicionar">
+    </form>
+
+    <script>
+        function excluirCliente(button) {
+            const row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+    </script>
+</body>
+</html>
