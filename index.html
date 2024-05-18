@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Pagamentos</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .pago {
+            color: green;
+        }
+        .atrasado {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabela de Pagamentos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Valor</th>
+                <th>Data de Vencimento</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>João</td>
+                <td>R$ 100,00</td>
+                <td>10/05/2024</td>
+                <td class="pago">MENSALIDADE EM DIA</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>R$ 150,00</td>
+                <td>15/05/2024</td>
+                <td class="atrasado">MENSALIDADE ATRASADA</td>
+            </tr>
+            <!-- Adicione mais linhas conforme necessário -->
+        </tbody>
+    </table>
+</body>
+</html>
